@@ -1,0 +1,58 @@
+<!--
+  Generated template for the ContactPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <h1 ion-text color="secondary" text-align="center">Details de contact</h1>
+
+    <ion-buttons top right>
+        <button ion-button color="primary" clear icon-only (click)="modify()">
+         Modifier
+          </button>
+        <button ion-button color="danger" clear icon-only (click)="delete(contact.contactId)">
+            <ion-icon name='trash' is-active="false"></ion-icon>
+          </button>
+      </ion-buttons >
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-icon class="io" name="ios-contact"></ion-icon>
+    <h5 class="it">{{contact.firstname}} {{contact.lastname}}</h5>
+  <ion-card>
+
+    <div *ngIf="contact">
+
+    <ion-list>
+        <ion-row>
+            <ion-col  width-33 class="ha"  > Email</ion-col>
+            <ion-col class="haa"   text-left  width-67>{{contact.email}}</ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col class="ha"  > Telephone</ion-col>
+            <ion-col class="haa"  >{{contact.phone}}</ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col class="ha"  > Adresse</ion-col>
+            <ion-col class="haa"  >{{contact.address}}</ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col class="ha"  > Ville</ion-col>
+            <ion-col class="haa"  >{{contact.city}}</ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col class="ha"  > Service</ion-col>
+            <ion-col class="ha"  >{{contact.service}}</ion-col>
+        </ion-row>
+
+
+    </ion-list>
+  </div>
+  </ion-card>
+</ion-content>
